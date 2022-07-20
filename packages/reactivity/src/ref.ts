@@ -292,6 +292,7 @@ export type UnwrapRefSimple<T> = T extends
   | BaseTypes
   | Ref
   | RefUnwrapBailTypes[keyof RefUnwrapBailTypes]
+  | ReadonlyArray<any>
   | { [RawSymbol]?: true }
   ? T
   : T extends Array<any>
